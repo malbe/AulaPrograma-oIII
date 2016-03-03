@@ -1,0 +1,73 @@
+using UnityEngine;
+using System.Collections;
+
+public class NewBehaviourScript : MonoBehaviour {
+
+	// Use this for initialization
+	void Start () {
+		Personagem p1 = new Personagem (); 
+		Personagem p2 = new Personagem (); 
+		Personagem p3 = new Personagem ();
+
+	}
+	
+	// Update is called once per frame
+	void Update () {
+	
+	}
+}
+
+
+
+public class Personagem{
+	int hpmaxima;
+	int hpatual;
+	int forca; 
+	int defesa; 
+	Arma maoDireita;  
+
+	public int Hpmaxima {
+		get{
+			return hpmaxima;
+		}
+		set{ 
+			if (value > 0){
+				hpmaxima=value; 
+			}
+		}
+	}
+
+	public int Hpatual {
+		get{
+			return hpatual;
+		}
+		set{ 
+			if (value > 0){
+				hpatual=value; 
+			}
+		}
+	}
+
+	public int Dano{ 
+		get { 
+			return maoDireita.Dano+forca;
+		}
+
+}
+
+
+public class Arma {
+	int forca;
+	int dano;
+	int durabilidade;
+
+		public int Dano{
+			get { 
+				return dano;
+			}
+		}
+
+}
+
+
+}
